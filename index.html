@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodApp - Zomato Clone</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-text">FoodApp</span>
+            </div>
+            <div class="search-bar">
+                <div class="location-input">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" placeholder="Enter delivery location">
+                    <i class="fas fa-caret-down"></i>
+                </div>
+                <div class="divider"></div>
+                <div class="restaurant-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search for restaurants or dishes">
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#" class="nav-link">Log In</a>
+                <a href="#" class="nav-link">Sign Up</a>
+                <a href="#" class="nav-link cart"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Food Categories -->
+    <section class="categories">
+        <div class="category-container">
+            <div class="category-card">
+                <div class="category-icon">
+                    <img src="https://b.zmtcdn.com/data/o2_assets/0b07ef18234c6fdf9365ad1c274ae0631612687510.png" alt="Delivery">
+                </div>
+                <span class="category-name">Delivery</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <img src="https://b.zmtcdn.com/data/o2_assets/78d25215ff4c1299578ed36eefd5f39d1616149985.png" alt="Dining">
+                </div>
+                <span class="category-name">Dining Out</span>
+            </div>
+            <div class="category-card">
+                <div class="category-icon">
+                    <img src="https://b.zmtcdn.com/data/o2_assets/01040767e4943c398e38e3592bb1ba8a1616150142.png" alt="Nightlife">
+                </div>
+                <span class="category-name">Nightlife</span>
+            </div>
+            <!-- Add more categories as needed -->
+        </div>
+    </section>
+
+    <!-- Restaurants Section -->
+    <section class="restaurants">
+        <div class="section-header">
+            <h2>Popular restaurants near you</h2>
+            <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="restaurant-container" id="restaurantContainer">
+            <!-- Restaurant cards will be added dynamically with JavaScript -->
+        </div>
+    </section>
+
+    <!-- Collections Section -->
+    <section class="collections">
+        <div class="section-header">
+            <h2>Collections</h2>
+            <a href="#" class="see-all">See all</a>
+        </div>
+        <div class="collection-container">
+            <div class="collection-card">
+                <img src="https://b.zmtcdn.com/data/collections/1b8a1b6e1b338d5b7b8b0b8b0b8b0b8_1616149985.jpg" alt="Trending">
+                <div class="collection-overlay">
+                    <h3>Trending This Week</h3>
+                    <p>30 Places <i class="fas fa-caret-right"></i></p>
+                </div>
+            </div>
+            <div class="collection-card">
+                <img src="https://b.zmtcdn.com/data/collections/1b8a1b6e1b338d5b7b8b0b8b0b8b0b8_1616149985.jpg" alt="Newly Opened">
+                <div class="collection-overlay">
+                    <h3>Newly Opened</h3>
+                    <p>15 Places <i class="fas fa-caret-right"></i></p>
+                </div>
+            </div>
+            <!-- Add more collections as needed -->
+        </div>
+    </section>
+
+    <!-- App Download Banner -->
+    <section class="app-banner">
+        <div class="banner-container">
+            <div class="banner-left">
+                <img src="https://b.zmtcdn.com/web_assets/8313a97510fcb0447d2d77c276532a511583262271.png" alt="FoodApp Mobile">
+            </div>
+            <div class="banner-right">
+                <h2>Get the FoodApp App</h2>
+                <p>We will send you a link, open it on your phone to download the app</p>
+                <div class="download-options">
+                    <div class="radio-option">
+                        <input type="radio" id="email" name="download" checked>
+                        <label for="email">Email</label>
+                    </div>
+                    <div class="radio-option">
+                        <input type="radio" id="phone" name="download">
+                        <label for="phone">Phone</label>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Enter your email or phone">
+                    <button class="btn-send">Send App Link</button>
+                </div>
+                <div class="app-stores">
+                    <img src="https://b.zmtcdn.com/web_assets/8313a97510fcb0447d2d77c276532a511583262271.png" alt="App Store">
+                    <img src="https://b.zmtcdn.com/web_assets/8313a97510fcb0447d2d77c276532a511583262271.png" alt="Play Store">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <span class="logo-text">FoodApp</span>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h4>Company</h4>
+                    <a href="#">About Us</a>
+                    <a href="#">Team</a>
+                    <a href="#">Careers</a>
+                    <a href="#">Blog</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Contact</h4>
+                    <a href="#">Help & Support</a>
+                    <a href="#">Partner with us</a>
+                    <a href="#">Ride with us</a>
+                </div>
+                <div class="footer-column">
+                    <h4>Legal</h4>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+            <div class="footer-social">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2023 FoodApp Clone. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
