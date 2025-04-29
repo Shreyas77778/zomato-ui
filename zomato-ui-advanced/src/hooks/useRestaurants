@@ -1,0 +1,21 @@
+import { useEffect } from 'react'
+import { useDispatch } from 'react-redux'
+import { setRestaurants } from '../features/restaurants/restaurantsSlice'
+import { fetchRestaurants } from '../utils/api'
+
+export const useRestaurants = () => {
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const loadRestaurants = async () => {
+      try {
+        const data = await fetchRestaurants()
+        dispatch(setRestaurants(data))
+      } catch (error) {
+        console.error('Failed to load restaurants:', error)
+      }
+    }
+
+    loadRestaurants()
+  }, [dispatch])
+}
